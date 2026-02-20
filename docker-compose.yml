@@ -5,7 +5,7 @@ services:
     ports:
       - "54321:5432"
     networks:
-      - ritm3_net_share
+      - test_net_share
     image: postgres:15.5
     volumes:
       - db-data:/var/lib/postgresql/data
@@ -17,7 +17,7 @@ services:
   php:
     user: www-data
     networks:
-      - ritm3_net_share
+      - test_net_share
     build:
       context: ./docker/php
       args:
@@ -36,7 +36,7 @@ services:
 
   nginx:
     networks:
-      - ritm3_net_share
+      - test_net_share
     image: nginx:stable-alpine
     ports:
       - "8080:80"
@@ -51,5 +51,5 @@ volumes:
   db-data:
 
 networks:
-  ritm3_net_share:
+  test_net_share:
     driver: bridge
