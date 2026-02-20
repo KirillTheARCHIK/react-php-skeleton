@@ -1,0 +1,37 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+public/bundles
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.test.local
+*.local*
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.php-cs-fixer.cache
+generate.log
+# environment
+.idea
+.vscode
+
+# uploads
+/public/uploads
+
+#lint
+.phplint.cache
+back/.phplint.cache
+/.php-cs-fixer.cache

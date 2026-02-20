@@ -1,0 +1,2 @@
+export const SET_MAP_PARAMS = "SET_MAP_PARAMS";
+export const CLEAR_MAP_PARAMS = "CLEAR_MAP_PARAMS";

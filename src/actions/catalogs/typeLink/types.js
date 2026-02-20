@@ -1,0 +1,2 @@
+export const LOAD_TYPE_LINKS = "LOAD_TYPE_LINKS";
+export const UPDATE_TYPE_LINK = "UPDATE_TYPE_LINK";

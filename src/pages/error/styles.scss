@@ -1,0 +1,20 @@
+.error_page {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    overflow: auto;
+    margin-top: -74px;
+    &-image{
+    &_dark {
+      width: 100%;
+      background-image: url("images/svg/error/error_dark.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &_light {
+        width: 100%;
+        background-image: url("images/svg/error/error_light.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+  }}
+}

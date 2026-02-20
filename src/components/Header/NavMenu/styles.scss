@@ -1,0 +1,15 @@
+.nav-link {
+  &_active {
+    opacity: 1 !important;
+  }
+  &__item {
+    &_active {
+      &_light {
+        color: #004e9e !important;
+      }
+      &_dark {
+        color: #ea973e !important;
+      }
+    }
+  }
+}

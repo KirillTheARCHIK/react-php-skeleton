@@ -1,0 +1,2 @@
+export const LOAD_USER_ROLES = "LOAD_USER_ROLES";
+export const CLEAR_USER_ROLES = "CLEAR_USER_ROLES";

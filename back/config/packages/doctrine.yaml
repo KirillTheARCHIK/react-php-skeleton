@@ -1,0 +1,45 @@
+parameters:
+    # Adds a fallback DATABASE_URL if the env var is not set.
+    # This allows you to run cache:warmup even if your
+    # environment variables are not available yet.
+    # You should not need to change this value.
+    env(DATABASE_URL): ''
+
+doctrine:
+    dbal:
+        # configure these for your database server
+        schema_filter: ~^(?!view_)~
+        driver: pdo_pgsql
+        server_version: '15.5'
+        charset: utf8
+
+        url: '%env(resolve:DATABASE_URL)%'
+    orm:
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true
+        dql:
+            string_functions:
+                GET_JSON_VALUE: App\Extension\Doctrine\GetJsonValue
+                TEXT: App\Extension\Doctrine\CastToText
+                DATE: App\Extension\Doctrine\CastToDate
+                DISTINCT_ON: App\Extension\Doctrine\DistinctOn
+                DECIMAL: App\Extension\Doctrine\CastToDecimal
+            datetime_functions:
+                DATE_FORMAT: App\Extension\Doctrine\DateFormat
+                DATE_ADD: App\Extension\Doctrine\DateAdd
+                DATE_DIFF: App\Extension\Doctrine\DateDiff
+            numeric_functions:
+                ROUND: App\Extension\Doctrine\NumericFunction\Round
+        mappings:
+            App:
+                is_bundle: false
+                type: attribute
+                dir: '%kernel.project_dir%/src/Entity'
+                prefix: 'App\Entity'
+                alias: App
+        filters:
+            softdeleteable:
+                class: App\Filter\SoftDeleteableFilter
+                enabled: true
+        schema_ignore_classes:
+            - App\Entity\View\ViewVehicle

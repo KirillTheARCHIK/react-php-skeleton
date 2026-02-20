@@ -1,0 +1,31 @@
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/public/bundles/
+/var/cache
+/var/log/cron.log
+/vendor/
+###< symfony/framework-bundle ###
+/.idea
+#composer.lock
+#symfony.lock
+
+###> symfony/phpunit-bridge ###
+.phpunit.result.cache
+###< symfony/phpunit-bridge ###
+
+###> phpunit/phpunit ###
+.phpunit.result.cache
+###< phpunit/phpunit ###
+cghooks.lock
+
+
+###> friendsofphp/php-cs-fixer ###
+/.php-cs-fixer.php
+/.php-cs-fixer.cache
+###< friendsofphp/php-cs-fixer ###
+/config/app.yaml
+/config/firebase_credentials.json
+
+dumps

@@ -1,0 +1,176 @@
+@use "sass:math";
+
+$labelPaddingValue: 5px;
+$labelLeft: 10px;
+$borderWidth: 2px;
+$labelHeight: 18px;
+$errorColor: #EF4444;
+$lightMainColor: #004E9E;
+$darkMainColor: #EA973E;
+$lightDisabledInputColor: #B1B1B1;
+$darkDisabledInputColor: #9F9F9F;
+$lightDisabledLabelColor: #868686;
+$darkDisabledLabelColor: #919191;
+
+@mixin labelStyle {
+  max-width: calc(100% - 2 * $labelLeft);
+  height: $labelHeight;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: $labelHeight;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  letter-spacing: 0.00938em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 $labelPaddingValue;
+  z-index: 1;
+  color: $lightMainColor;
+  background-color: inherit;
+}
+
+.date-picker {
+  display: inline-flex;
+  flex: 1;
+  position: relative;
+  flex-direction: column;
+  background-color: inherit;
+  width: fit-content;
+  margin-bottom: 25px;
+
+  &__label {
+    @include labelStyle;
+    position: absolute;
+    left: $labelLeft;
+    top: -9px;
+  }
+
+  &__body {
+    position: relative;
+    height: 55px;
+    width: fit-content;
+  }
+
+  &__legend-content {
+    @include labelStyle;
+  }
+
+  &__error {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1.66;
+    letter-spacing: 0.03333em;
+    text-align: left;
+    margin: 3px 14px 0;
+    color: $errorColor;
+  }
+
+  .ant-picker {
+    border-color: transparent !important;
+  }
+
+  &_active {
+    fieldset {
+      border-color: $lightMainColor !important;
+    }
+  }
+
+  &_full-width {
+    .ant-picker {
+      display: flex !important;
+    }
+
+    .date-picker__body {
+      width: 100%;
+    }
+
+    &.date-picker {
+      width: 100%;
+    }
+  }
+
+  &_dark-theme {
+    .date-picker__label {
+      color: $darkMainColor;
+    }
+
+    &.date-picker_disabled {
+      .date-picker__label {
+        color: $darkDisabledLabelColor;
+      }
+
+      input {
+        color: $darkDisabledInputColor !important;
+      }
+    }
+
+    fieldset {
+      border-color: #FFFFFF !important;
+    }
+
+    &.date-picker_active {
+      fieldset {
+        border-color: $darkMainColor !important;
+      }
+    }
+  }
+
+  &_size-small {
+    .date-picker__label {
+      height: 16px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    .date-picker__body {
+      height: 40px;
+    }
+
+    .date-picker__legend-content {
+      height: 16px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &_disabled {
+    .date-picker__label {
+      color: $lightDisabledLabelColor !important;
+    }
+
+    input {
+      color: $lightDisabledInputColor;
+    }
+  }
+
+  &_error {
+    .date-picker__label {
+      color: $errorColor;
+    }
+  }
+
+  fieldset {
+    width: 100%;
+    min-width: 0;
+    position: absolute;
+    top: math.div(-($labelHeight - $borderWidth), 2);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: $borderWidth solid #D3D3D3;
+    border-radius: 4px;
+    margin: 0;
+    padding: 0 ($labelLeft - $borderWidth);
+    pointer-events: none;
+
+    legend {
+      padding: 0;
+      width: auto;
+      height: $labelHeight;
+      max-width: 100%;
+      overflow: hidden;
+      opacity: 0;
+    }
+  }
+}

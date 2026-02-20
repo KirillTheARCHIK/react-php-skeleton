@@ -1,0 +1,66 @@
+[
+    {
+      "id": 1,
+      "name": "Кинель (Самара)",
+      "displayName": "Кинель (Самара)",
+      "editor": null,
+      "slug": "kinel",
+      "startedAt": "2024-03-05T18:12:10",
+      "endAt": "2024-03-05T18:12:10",
+      "decryptionStage": "progress",
+      "points": [{ "latitude": 53.231, "longitude": 50.6334 }]
+    },
+    {
+      "id": 2,
+      "name": "Лужская",
+      "displayName": "Лужская",
+      "editor": null,
+      "startedAt": "2024-03-05T18:12:10",
+      "endAt": "2024-03-05T18:12:10",
+      "decryptionStage": "progress",
+      "points": [{ "latitude": 59.669744, "longitude": 28.431569 }]
+    },
+    {
+      "id": 3,
+      "name": "Новосибирск (Инская)",
+      "displayName": "Новосибирск (Инская)",
+      "editor": null,
+      "startedAt": "2024-03-05T18:12:10",
+      "endAt": "2024-03-05T18:12:10",
+      "decryptionStage": "progress",
+      "points": [{ "latitude": 54.964456126, "longitude": 83.119176161 }]
+    },
+    {
+      "id": 4,
+      "name": "Омск",
+      "displayName": "Омск",
+      "editor": null,
+      "slug": "omsk",
+      "startedAt": "2024-03-05T18:12:10",
+      "endAt": "2024-03-05T18:12:10",
+      "decryptionStage": "done",
+      "points": [{ "latitude": 54.939531873, "longitude": 73.386591822 }]
+    },
+    {
+      "id": 5,
+      "name": "Орехово-Зуево",
+      "displayName": "Орехово-Зуево",
+      "editor": null,
+      "slug": "zyevo",
+      "startedAt": "2024-03-05T18:12:10",
+      "endAt": "2024-03-05T18:12:10",
+      "decryptionStage": "done",
+      "points": [{ "latitude": 55.795956, "longitude": 38.976849 }]
+    },
+    {
+      "id": 6,
+      "name": "Хабаровск (Хабаровск-2)",
+      "displayName": "Хабаровск (Хабаровск-2)",
+      "editor": null,
+      "slug": "zyevo",
+      "startedAt": "2024-03-05T18:12:10",
+      "endAt": "2024-03-05T18:12:10",
+      "decryptionStage": "done",
+      "points": [{ "latitude": 48.426220089, "longitude": 135.127841793 }]
+    }
+]

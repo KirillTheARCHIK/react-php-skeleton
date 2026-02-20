@@ -1,0 +1,1 @@
+export const LOAD_RATING_TABLE = "LOAD_RATING_TABLE";

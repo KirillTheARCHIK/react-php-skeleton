@@ -1,0 +1,11 @@
+.header {
+  &__logo {
+    height: 80px;
+    width: 165px;
+    min-width: 165px;
+    // background-image: url("./images/png/header/header_logo.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+  }
+}

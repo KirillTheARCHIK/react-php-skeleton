@@ -1,0 +1,15 @@
+.storybook-debug {
+  padding: 1em;
+  background-color: #EA973E;
+  overflow: auto;
+  height: 150px;
+  border-radius: 5px;
+
+  &__header {
+    margin-top: 0;
+  }
+
+  &_dark {
+    background-color: #004E9E;
+  }
+}
